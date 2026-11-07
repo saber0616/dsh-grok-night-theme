@@ -1,0 +1,58 @@
+{
+  "name": "dsh-grok-night-theme",
+  "version": "1.0.0",
+  "description": "Grok Night: a GrokBot-inspired warm-charcoal theme with amber accents for the DeepSeek Harness Web UI.",
+  "license": "MIT",
+  "author": "saber0616",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "DISCLAIMER.md"
+  ],
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saber0616/dsh-grok-night-theme.git"
+  },
+  "homepage": "https://github.com/saber0616/dsh-grok-night-theme#readme",
+  "bugs": {
+    "url": "https://github.com/saber0616/dsh-grok-night-theme/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "theme",
+    "grok",
+    "grokbot",
+    "dark-theme",
+    "light-theme",
+    "amber"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
